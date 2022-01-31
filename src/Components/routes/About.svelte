@@ -5,18 +5,18 @@
 <div class="info">
     <h1>About Us</h1>
       <p>
-        Despite the growing popularity of Svelte, current development tools for this front-end framework is very limited. Prior to Svelte Slicer, there was not an apparent tool featuring time travel along along with rendering of state. We saw the need for a more robust development tool which can alleviate the challenges developers face in the debugging process.
+        Despite the growing popularity of Svelte, current development tools for this front-end framework are very limited. At the time of architecting Svelte Slicer, there was not an apparent tool featuring time travel along with rendering of state. We saw the need for a more robust development tool which can alleviate the challenges developers face in the debugging process.
     </p>
 
     <p>
-        We were inspired by popular development tools for React and Redux to go above and beyond the existing Svelte DevTool for easier debugging of Svelte Applications.
+        We were inspired by existing devtools when deciding on practical features that would improve the Svelte developer experience.
     </p>
 
     <p>
-        Svelte Slicer will fill a gap in the current Svelte ecosystem by providing a more robust and intuitive tool for debugging, encouraging further adoption of this up-and-coming technology.
+        Svelte Slicer will fill a gap in the current Svelte ecosystem by providing a practical and intuitive tool for debugging, encouraging further adoption of this up-and-coming technology.
     </p>
     <p>
-        Developed within a technology accelerator: https://opensourcelabs.io/
+        Svelte Slicer was developed through an innovative technology accelerator at: <a href="https://opensourcelabs.io/"> OSLabs Beta</a>
     </p>
 
     <hr>
