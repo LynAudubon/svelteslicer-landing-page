@@ -74,4 +74,8 @@
 		width: 50%;
 		height: 300px;
 	}
+
+	hr {
+        background-color: darkgrey;
+    }
 </style>

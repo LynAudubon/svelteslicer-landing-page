@@ -50,11 +50,11 @@
 	footer button {
 		margin-top: 1rem;
 		min-width: 120px;
-		min-height: 30px;
+		min-height: 40px;
 		border-radius: 2rem;
 		background-color: clear;
 		color: orange;
-		font-weight: bolder;
+		font-weight: 800;
 		border: 0px;
 		cursor: pointer
 	}
