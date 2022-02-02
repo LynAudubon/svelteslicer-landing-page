@@ -4,7 +4,7 @@
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <nav role="navigation">
 	<div class="left_div" style="display:flex">
-		<a href="/"><img src="images\svelte_slicer_logo_64x64.png" alt="logo"/></a>
+		<a href="/"><img src="images/svelte_slicer_logo_64x64.png" alt="logo"/></a>
 		<p>Svelte Slicer</p>
 	</div>
 	
