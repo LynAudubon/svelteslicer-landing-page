@@ -3,7 +3,7 @@
 </script>
 
 <div class="info">
-    <h1>About Us</h1>
+    <h1 class="aboutHeader">About Us</h1>
       <p>
         Despite the growing popularity of Svelte, current development tools for this front-end framework are very limited. At the time of architecting Svelte Slicer, there was not an apparent tool featuring time travel along with rendering of state. We saw the need for a more robust development tool which can alleviate the challenges developers face in the debugging process.
     </p>
@@ -39,6 +39,9 @@
         background-color: gainsboro;
     }
 
+    .aboutHeader{
+        font-size: 2em;
+    }
     p {
         font-size: larger;
     }
