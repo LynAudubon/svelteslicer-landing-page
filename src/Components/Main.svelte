@@ -10,7 +10,7 @@
 		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{CTA_Name}</button></a>
 	</div>
 	<div class="right_side">
-        <video width="613.5" height="370" autoplay muted>
+        <video class="demoVid" width="613.5" height="370" autoplay muted>
 			<source src="images/demo_video2.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 			<track kind="captions"/>
@@ -27,7 +27,7 @@
 
 	strong.headerFontSz {
 		font-size: 2em;
-		letter-spacing: .4em;
+		letter-spacing: .3em;
 	}
 
 	p {
@@ -36,6 +36,10 @@
 
 	h1 {
 		font-weight: bolder;
+	}
+
+	.right_side .demoVid {
+		margin: 3px;
 	}
 
 	.left_side {
@@ -50,6 +54,7 @@
 		text-align: center;
 		padding: 5px;
 		padding-top: 10px;
+		
 	}
 
 	button {
@@ -59,7 +64,7 @@
 		border-radius: 2rem;
 		background-color: lightgray;
 		color: white;
-		font-size: 1.2rem;
+		font-size: 2rem;
 		border: 0px;
 		box-shadow: 2px 4px 5px gray;
 	}

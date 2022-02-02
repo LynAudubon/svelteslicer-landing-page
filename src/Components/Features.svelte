@@ -57,16 +57,23 @@
 		justify-content: center;
 		gap: 10px;
 		padding: 4rem;
+		font-size: 1.5em;
 		text-align: center;
 	}
 	
 	.feature {
 		flex: 1;
+		font-size: 1em;
+		color:rgb(53, 50, 50);
 	}
 
 	.right_side {
 		text-align: center;
+		font-size: 1em;
 		margin: 50px;
+		position: relative;
+		color:rgb(53, 50, 50);
+		
 	}
 
 	img {

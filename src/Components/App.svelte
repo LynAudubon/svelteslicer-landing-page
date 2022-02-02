@@ -19,8 +19,6 @@
 	<div>
 		<Route path="/about" component="{About}" />
 		<Route path="/" component="{Home}" ></Route>
-		<!-- <Route path="/" ><Home /></Route> -->
-
 	</div>
 </Router>
 

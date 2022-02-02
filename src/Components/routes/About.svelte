@@ -40,14 +40,15 @@
     }
 
     .aboutHeader{
-        font-size: 2em;
+        font-size: 3em;
     }
     p {
-        font-size: larger;
+        font-size: 1.5em;
     }
 
     .list {
         text-align: center;
+        font-size: 1em;
     }
 
 </style>

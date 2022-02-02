@@ -1,10 +1,8 @@
 <script>
 
-	import Home from './routes/Home.svelte';
-    import { Router, Route, Link } from "svelte-routing";
 
 let dark = false;
-const darkToggle = () => {
+export const darkToggle = () => {
 	dark = !dark;
 	if(dark === true){
 	const mainHeader = document.getElementsByClassName("left_side");
@@ -33,13 +31,20 @@ const darkToggle = () => {
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
-		<button on:click={() => darkToggle()}>Darker Theme </button>
+		<button class="darkBtn" on:click={() => darkToggle()}>Darker Theme </button>
 	</div>
 </nav>
 
 
 <style>
-	
+
+	.right_div a:hover {
+	text-decoration: underline;
+	}
+
+	.right_div a:active{
+		color: red;
+	}
 	nav {
 		display: flex;
 		background-color: darkgray;
@@ -67,6 +72,16 @@ const darkToggle = () => {
 	nav div {
 		flex: 1;
 		padding: 1rem;
+	}
+
+	.darkBtn {
+		background-color: transparent;
+		border: none;
+		font-size: inherit;
+		font-weight: 800;
+		font-family: sans-serif;
+		color:rgb(53, 50, 50);
+		cursor: pointer;
 	}
 
 	.right_div {
