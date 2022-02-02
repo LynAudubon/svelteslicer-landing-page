@@ -3,8 +3,8 @@
 </script>
 
 <main>
-	<div class="left_side">
-		<h1>Svelte Slicer</h1>
+	<div class="left_side" role="heading" >
+		<h1 ><strong class='headerFontSz'>Svelte Slicer</strong></h1>
 		<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
 
 		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{CTA_Name}</button></a>
@@ -23,6 +23,15 @@
 		display: flex;
 		flex-direction: row;
 		color: white;
+	}
+
+	strong.headerFontSz {
+		font-size: 2em;
+		letter-spacing: .4em;
+	}
+
+	p {
+		font-size: 1.5em;
 	}
 
 	h1 {
