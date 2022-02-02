@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Menu from '../Menu.svelte';
 	import Main from '../Main.svelte';
 	import Features from '../Features.svelte';
 	import Footer from '../Footer.svelte';
@@ -9,7 +8,7 @@
 	};
 </script>
 	 
-<Main CTA_Name={"Download"}/>
+<Main Button_Name={"Download"}/>
 <Features />
 <Footer on:scrollToTop={() => scrollToTop()}/>
 

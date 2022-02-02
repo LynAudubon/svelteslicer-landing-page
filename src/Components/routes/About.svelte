@@ -36,7 +36,7 @@
         display: block;
         padding: 15px;
         color: rgba(0, 0, 0, 0.466);
-        background-color: gainsboro;
+        background-color: #ffff;
     }
 
     p {
@@ -45,6 +45,10 @@
 
     .list {
         text-align: center;
+    }
+
+    hr {
+        background-color: darkgrey;
     }
 
 </style>

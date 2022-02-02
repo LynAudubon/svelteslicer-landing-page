@@ -1,46 +1,162 @@
 <script lang="ts">
-	export let CTA_Name: string = "Click Here";
+	export let Button_Name: string = "Download";
+
+	let bannerStatus = 1;
+	let bannerTimer = 16000;
+
+	window.onload = function() {
+		bannerLoop();
+	};
+
+	const startBannerLoop = setInterval(function(){
+		bannerLoop();
+	}, bannerTimer);
+
+	function bannerLoop() {
+		if(bannerStatus === 1) {
+			// document.getElementById("demo1").style.visibility = "hidden";
+			document.getElementById("demo1").style.opacity = "0";
+			document.getElementById("intro").style.opacity = "1";
+
+
+			setTimeout(function() {
+				document.getElementById("intro").style.right = "0px";
+				document.getElementById("intro").style.zIndex = "1000";
+				document.getElementById("demo1").style.right = "-1200px";
+				document.getElementById("demo1").style.zIndex = "700";
+				document.getElementById("demo2").style.right = "1200px";
+				document.getElementById("demo2").style.zIndex = "500";
+
+			}, 500);
+			
+			setTimeout(function() {
+				document.getElementById("demo1").style.opacity = "1";
+				document.getElementById("intro").style.opacity = "0";
+			}, 5000)
+			
+			bannerStatus = 2;
+		}
+		else if(bannerStatus === 2) {
+			// document.getElementById("demo2").style.visibility = "hidden";
+			document.getElementById("demo2").style.opacity = "0";
+			document.getElementById("demo1").style.opacity = "1";
+
+			setTimeout(function() {
+				document.getElementById("demo1").style.right = "0px";
+				document.getElementById("demo1").style.zIndex = "1000";
+				document.getElementById("demo2").style.right = "-1200px";
+				document.getElementById("demo2").style.zIndex = "700";
+				document.getElementById("intro").style.right = "1200px";
+				document.getElementById("intro").style.zIndex = "500";
+
+			}, 500);
+			
+			setTimeout(function() {
+				document.getElementById("demo2").style.opacity = "1";
+				document.getElementById("demo1").style.opacity = "0";
+			}, 5000)
+			
+			bannerStatus = 3;
+		}
+		else if (bannerStatus === 3) {
+			// document.getElementById("intro").style.visibility = "hidden";
+			document.getElementById("intro").style.opacity = "0";
+			document.getElementById("demo2").style.opacity = "1";
+
+			setTimeout(function() {
+				document.getElementById("demo2").style.right = "0px";
+				document.getElementById("demo2").style.zIndex = "1000";
+				document.getElementById("intro").style.right = "-1200px";
+				document.getElementById("intro").style.zIndex = "700";
+				document.getElementById("demo1").style.right = "1200px";
+				document.getElementById("demo1").style.zIndex = "500";
+
+			}, 500);
+			
+			setTimeout(function() {
+				document.getElementById("intro").style.opacity = "1";
+				document.getElementById("demo2").style.opacity = "0";
+			}, 5000)
+			
+			bannerStatus = 1;
+		}
+		
+	}
 </script>
 
-<main>
-	<div class="left_side">
-		<h1>Svelte Slicer</h1>
-		<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
-
-		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{CTA_Name}</button></a>
-	</div>
-	<div class="right_side">
+<main class="main" id="banner">
+	<div class="svelte_banner ban" id="demo2">
         <video width="613.5" height="370" autoplay muted>
 			<source src="images/demo_video2.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 			<track kind="captions"/>
 		</video>
 	</div>
+	<div class="demo_banner ban" id="demo1">
+        <video width="613.5" height="370" autoplay muted>
+			<source src="images/example.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			<track kind="captions"/>
+		</video>
+	</div>
+	<div class="intro_banner ban" id="intro">
+			<h1>Svelte Slicer</h1>
+			<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
+
+			<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{Button_Name}</button></a>
+	</div>
 </main>
 
 <style>
-	main {
-		display: flex;
-		flex-direction: row;
+	.main {
+		margin: 0 auto;
 		color: white;
+		width: 100%;
+		height: 389px;
+		overflow: hidden;
+		position: relative;
 	}
 
 	h1 {
 		font-weight: bolder;
 	}
 
-	.left_side {
-		padding: 2rem;
-		flex: 1;
-		background-color: hsla(19, 100%, 50%, 0.884);
+	.main .ban {
+		width: 1300px;
+		height: 100%;
+		position: absolute;
+		top: 0px; 
+		left: 0px;
+		right: 0px;
+		transition: all ease-in-out 500ms;
+		-webkit-transition: all ease-in-out 500ms;
+		-moz-transition: all ease-in-out 500ms;
+		-o-transition: all ease-in-out 500ms;
 	}
 
-	.right_side {
+	.main .svelte_banner {
+		display: block;
+		background-color: hsla(19, 100%, 50%, 0.884);
+		text-align: center;
+		opacity: 0;
+		padding-top: 10px;
+		padding-top: 10px;
+	}
+
+	.main .demo_banner {
 		display: block;
 		background-color: orange;
 		text-align: center;
-		padding: 5px;
+		opacity: 0;
 		padding-top: 10px;
+		padding-top: 10px;
+	}
+
+	.main .intro_banner {
+		padding: 2rem;
+		height: 1050px;
+		opacity: 0;
+		background-color: hsla(19, 100%, 50%, 0.884);
 	}
 
 	button {
@@ -52,7 +168,7 @@
 		color: white;
 		font-size: 1.2rem;
 		border: 0px;
-		box-shadow: 2px 4px 5px gray;
+		box-shadow: 2px 3px 4px gray;
 	}
 
 	button:hover{

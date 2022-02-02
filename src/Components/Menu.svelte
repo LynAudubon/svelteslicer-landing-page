@@ -17,6 +17,10 @@
 
 
 <style>
+	.left_div p {
+		text-shadow: white 0px 0px 10px;
+		font-size: 25px;
+	}
 	
 	nav {
 		display: flex;
