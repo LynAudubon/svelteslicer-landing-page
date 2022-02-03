@@ -86,7 +86,7 @@
 		</video>
 	</div>
 	<div class="demo_banner ban" id="demo1">
-		<div width="613.5" height="370">
+		<div class="pic">
 			<img src="images/example.png" alt="graph" />
 		</div>
 	</div>
@@ -165,6 +165,12 @@
 		font-size: 1.2rem;
 		border: 0px;
 		box-shadow: 2px 3px 4px gray;
+	}
+
+	img {
+		width: 50%;
+		height: 50%;
+		padding-top: 15px;
 	}
 
 	button:hover {
