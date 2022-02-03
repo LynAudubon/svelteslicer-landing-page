@@ -4,106 +4,102 @@
 	let bannerStatus = 1;
 	let bannerTimer = 16000;
 
-	window.onload = function() {
+	window.onload = function () {
 		bannerLoop();
 	};
 
-	const startBannerLoop = setInterval(function(){
+	const startBannerLoop = setInterval(function () {
 		bannerLoop();
 	}, bannerTimer);
 
 	function bannerLoop() {
-		if(bannerStatus === 1) {
+		if (bannerStatus === 1) {
 			// document.getElementById("demo1").style.visibility = "hidden";
 			document.getElementById("demo1").style.opacity = "0";
 			document.getElementById("intro").style.opacity = "1";
 
-
-			setTimeout(function() {
+			setTimeout(function () {
 				document.getElementById("intro").style.right = "0px";
 				document.getElementById("intro").style.zIndex = "1000";
 				document.getElementById("demo1").style.right = "-1200px";
 				document.getElementById("demo1").style.zIndex = "700";
 				document.getElementById("demo2").style.right = "1200px";
 				document.getElementById("demo2").style.zIndex = "500";
-
 			}, 500);
-			
-			setTimeout(function() {
+
+			setTimeout(function () {
 				document.getElementById("demo1").style.opacity = "1";
 				document.getElementById("intro").style.opacity = "0";
-			}, 5000)
-			
+			}, 5000);
+
 			bannerStatus = 2;
-		}
-		else if(bannerStatus === 2) {
+		} else if (bannerStatus === 2) {
 			// document.getElementById("demo2").style.visibility = "hidden";
 			document.getElementById("demo2").style.opacity = "0";
 			document.getElementById("demo1").style.opacity = "1";
 
-			setTimeout(function() {
+			setTimeout(function () {
 				document.getElementById("demo1").style.right = "0px";
 				document.getElementById("demo1").style.zIndex = "1000";
 				document.getElementById("demo2").style.right = "-1200px";
 				document.getElementById("demo2").style.zIndex = "700";
 				document.getElementById("intro").style.right = "1200px";
 				document.getElementById("intro").style.zIndex = "500";
-
 			}, 500);
-			
-			setTimeout(function() {
+
+			setTimeout(function () {
 				document.getElementById("demo2").style.opacity = "1";
 				document.getElementById("demo1").style.opacity = "0";
-			}, 5000)
-			
+			}, 5000);
+
 			bannerStatus = 3;
-		}
-		else if (bannerStatus === 3) {
+		} else if (bannerStatus === 3) {
 			// document.getElementById("intro").style.visibility = "hidden";
 			document.getElementById("intro").style.opacity = "0";
 			document.getElementById("demo2").style.opacity = "1";
 
-			setTimeout(function() {
+			setTimeout(function () {
 				document.getElementById("demo2").style.right = "0px";
 				document.getElementById("demo2").style.zIndex = "1000";
 				document.getElementById("intro").style.right = "-1200px";
 				document.getElementById("intro").style.zIndex = "700";
 				document.getElementById("demo1").style.right = "1200px";
 				document.getElementById("demo1").style.zIndex = "500";
-
 			}, 500);
-			
-			setTimeout(function() {
+
+			setTimeout(function () {
 				document.getElementById("intro").style.opacity = "1";
 				document.getElementById("demo2").style.opacity = "0";
-			}, 5000)
-			
+			}, 5000);
+
 			bannerStatus = 1;
 		}
-		
 	}
 </script>
 
 <main class="main" id="banner">
 	<div class="svelte_banner ban" id="demo2">
-        <video width="613.5" height="370" autoplay muted>
-			<source src="images/demo_video2.mp4" type="video/mp4">
+		<video width="613.5" height="370" autoplay muted>
+			<source src="images/demo_video.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
-			<track kind="captions"/>
+			<track kind="captions" />
 		</video>
 	</div>
 	<div class="demo_banner ban" id="demo1">
-        <video width="613.5" height="370" autoplay muted>
-			<source src="images/example.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-			<track kind="captions"/>
-		</video>
+		<div width="613.5" height="370">
+			<img src="images/example.png" alt="graph" />
+		</div>
 	</div>
 	<div class="intro_banner ban" id="intro">
-			<h1>Svelte Slicer</h1>
-			<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
+		<h1>Svelte Slicer</h1>
+		<p>
+			Browser devtool extension for time traveling and visualizing Svelte
+			applications.
+		</p>
 
-			<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{Button_Name}</button></a>
+		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"
+			><button>{Button_Name}</button></a
+		>
 	</div>
 </main>
 
@@ -125,7 +121,7 @@
 		width: 1300px;
 		height: 100%;
 		position: absolute;
-		top: 0px; 
+		top: 0px;
 		left: 0px;
 		right: 0px;
 		transition: all ease-in-out 500ms;
@@ -171,11 +167,10 @@
 		box-shadow: 2px 3px 4px gray;
 	}
 
-	button:hover{
+	button:hover {
 		min-width: 260px;
 		min-height: 65px;
 		cursor: pointer;
 		font-weight: bold;
 	}
-
 </style>
