@@ -122,7 +122,8 @@
 	}
 
 	.main .ban {
-		width: 1300px;
+		/* width: 1300px; */
+		width: 2000px;
 		height: 100%;
 		position: absolute;
 		top: 0px; 

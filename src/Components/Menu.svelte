@@ -1,4 +1,34 @@
 <script>
+	let dark = false;
+export const darkToggle = () => {
+	dark = !dark;
+	if(dark === true){
+		const svelteBan = document.getElementsByClassName("svelte_banner ban");
+		svelteBan[0].style.backgroundColor = "grey";
+		const demoBan = document.getElementsByClassName("demo_banner ban");
+		demoBan[0].style.backgroundColor = "grey";
+		const introBan = document.getElementsByClassName("intro_banner ban");
+		introBan[0].style.backgroundColor = "black";
+		const features = document.getElementsByClassName("features");
+		features[0].style.backgroundColor = "grey";
+		document.getElementById("mainWrap").style.backgroundColor = "grey";
+		
+
+
+	}else{
+		const svelteBan = document.getElementsByClassName("svelte_banner ban");
+		svelteBan[0].style.backgroundColor = "hsla(19, 100%, 50%, 0.884)";
+		const demoBan = document.getElementsByClassName("demo_banner ban");
+		demoBan[0].style.backgroundColor = "orange";
+		const introBan = document.getElementsByClassName("intro_banner ban");
+		introBan[0].style.backgroundColor = "hsla(19, 100%, 50%, 0.884)";
+		const features = document.getElementsByClassName("features");
+		features[0].style.backgroundColor = "white";
+		document.getElementById("mainWrap").style.backgroundColor = "white";
+
+
+	}
+}
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles -->
@@ -12,6 +42,7 @@
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
+		<button class="darkBtn" on:click={() => darkToggle()}>Darker Theme </button>
 	</div>
 </nav>
 
@@ -54,5 +85,18 @@
 		background-color: lightgray;
 		text-decoration: none;
 		padding: 0 0.5rem;
+	}
+	.darkBtn {
+		background-color: transparent;
+		border: none;
+		font-size: inherit;
+		font-weight: 800;
+		font-family: sans-serif;
+		color:rgb(53, 50, 50);
+		cursor: pointer;
+	}
+
+	.right_div  a:hover{
+		text-decoration: underline;
 	}
 </style>

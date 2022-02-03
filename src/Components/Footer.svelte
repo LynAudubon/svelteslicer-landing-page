@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { link } from "svelte-routing"
+	import { link } from "svelte-routing";
 
 	const dispatch = createEventDispatcher();
 
