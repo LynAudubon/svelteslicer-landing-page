@@ -13,8 +13,6 @@ export const darkToggle = () => {
 		const features = document.getElementsByClassName("features");
 		features[0].style.backgroundColor = "grey";
 		document.getElementById("mainWrap").style.backgroundColor = "grey";
-		
-
 
 	}else{
 		const svelteBan = document.getElementsByClassName("svelte_banner ban");
@@ -26,7 +24,6 @@ export const darkToggle = () => {
 		const features = document.getElementsByClassName("features");
 		features[0].style.backgroundColor = "white";
 		document.getElementById("mainWrap").style.backgroundColor = "white";
-
 
 	}
 }
