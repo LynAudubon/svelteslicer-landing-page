@@ -1,4 +1,5 @@
 <script>
+	
 	let dark = false;
 export const darkToggle = () => {
 	dark = !dark;
@@ -35,14 +36,14 @@ export const darkToggle = () => {
 <nav role="navigation">
 	<div class="left_div" style="display:flex">
 		<a href="/"><img src="images/svelte_slicer_logo_64x64.png" alt="logo"/></a>
-		<p>Svelte Slicer</p>
+		<p class="toolTitle">Svelte Slicer</p>
 	</div>
 	
 	<div class="right_div">
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
-		<button class="darkBtn" on:click={() => darkToggle()}>Darker Theme </button>
+			<button class="darkBtn" on:click={() => darkToggle()}><img src="images/dark_icon.png" alt="darkmode moon"/></button>
 	</div>
 </nav>
 
@@ -89,14 +90,15 @@ export const darkToggle = () => {
 	.darkBtn {
 		background-color: transparent;
 		border: none;
-		font-size: inherit;
-		font-weight: 800;
-		font-family: sans-serif;
 		color:rgb(53, 50, 50);
 		cursor: pointer;
 	}
 
 	.right_div  a:hover{
 		text-decoration: underline;
+	}
+
+	.toolTitle {
+		font-size:25px;
 	}
 </style>

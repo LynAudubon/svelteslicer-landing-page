@@ -23,7 +23,12 @@
 	</div>
 
 	<div>
-		<button on:click={() => onBackToTop()}>Scroll to Top</button>
+		<!-- <button on:click={() => onBackToTop()}>Scroll to Top</button> -->
+		<button class="icon8" on:click={() => onBackToTop()}>
+			<img src="images/scroll-up.png" alt="scroll up arrow"/>
+		</button>
+		<a class="icon8" href=https://icons8.com><h3>icons8</h3></a>
+		
 	</div>
 </footer>
 
@@ -57,6 +62,11 @@
 		font-weight: 800;
 		border: 0px;
 		cursor: pointer
+	}
+
+	.icon8 {
+		text-align: center;
+		background-color: transparent;
 	}
 
 	</style>
