@@ -105,7 +105,7 @@
 
 <style>
 	.main {
-		margin: 0 auto;
+		margin: auto;
 		color: white;
 		width: 100%;
 		height: 389px;
@@ -118,7 +118,7 @@
 	}
 
 	.main .ban {
-		width: 1300px;
+		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: 0px;
