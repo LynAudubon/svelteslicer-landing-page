@@ -6,9 +6,7 @@
 	
 	export let url = "";
 
-	export const currentPath = window.location.pathname;
-	console.log(currentPath)
-
+	
 </script>
 
 <Router url="{url}">
