@@ -22,8 +22,8 @@ export const darkToggle = () => {
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <nav role="navigation">
 	<div class="left_div" style="display:flex">
-		<a href="/"><img src="images\svelte_slicer_logo_64x64.png" alt="logo"/></a>
-		<p id="menuHeader">Svelte Slicer</p>
+		<a href="/"><img src="images/svelte_slicer_logo_64x64.png" alt="logo"/></a>
+		<p>Svelte Slicer</p>
 	</div>
 	
 	<div class="right_div">
@@ -39,12 +39,17 @@ export const darkToggle = () => {
 <style>
 
 	.right_div a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 	}
 
 	.right_div a:active{
 		color: red;
 	}
+	.left_div p {
+		text-shadow: white 0px 0px 10px;
+		font-size: 25px;
+	}
+	
 	nav {
 		display: flex;
 		background-color: darkgray;

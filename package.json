@@ -1,13 +1,13 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "tsc": "tsc"
+    "heroku-postbuild": "npm run build",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "express": "^4.17.2",
     "sirv-cli": "^2.0.0",
     "svelte-fa": "^2.4.0",
     "svelte-routing": "^1.6.0"

@@ -37,7 +37,7 @@
 	{#each articles as article (article.id)}
 		<div class="feature">
 			<h3>{article.heading}</h3>
-			<Fa size="5x" icon={article.icon} color="lightgray" />
+			<div class='icon'><Fa size="5x" icon={article.icon} color="lightgray" /></div>
 			<p>{article.content}</p>
 		</div>
 	{/each}
@@ -54,7 +54,9 @@
 	
 	.features {
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
+		flex-wrap:wrap;
 		gap: 10px;
 		padding: 4rem;
 		font-size: 1.5em;
@@ -73,7 +75,6 @@
 		margin: 50px;
 		position: relative;
 		color:rgb(53, 50, 50);
-		
 	}
 
 	img {
@@ -81,4 +82,8 @@
 		width: 50%;
 		height: 300px;
 	}
+
+	hr {
+        background-color: darkgrey;
+    }
 </style>

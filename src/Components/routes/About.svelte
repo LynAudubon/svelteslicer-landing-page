@@ -36,7 +36,7 @@
         display: block;
         padding: 15px;
         color: rgba(0, 0, 0, 0.466);
-        background-color: gainsboro;
+        background-color: #ffff;
     }
 
     .aboutHeader{
@@ -49,6 +49,10 @@
     .list {
         text-align: center;
         font-size: 1em;
+    }
+
+    hr {
+        background-color: darkgrey;
     }
 
 </style>
