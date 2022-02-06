@@ -2,7 +2,7 @@
 	export let Button_Name: string = "Download";
 
 	let bannerStatus = 1;
-	let bannerTimer = 16000;
+	let bannerTimer = 15000;
 
 	window.onload = function () {
 		bannerLoop();
@@ -14,7 +14,6 @@
 
 	function bannerLoop() {
 		if (bannerStatus === 1) {
-			// document.getElementById("demo1").style.visibility = "hidden";
 			document.getElementById("demo1").style.opacity = "0";
 			document.getElementById("intro").style.opacity = "1";
 
@@ -34,7 +33,6 @@
 
 			bannerStatus = 2;
 		} else if (bannerStatus === 2) {
-			// document.getElementById("demo2").style.visibility = "hidden";
 			document.getElementById("demo2").style.opacity = "0";
 			document.getElementById("demo1").style.opacity = "1";
 
@@ -54,7 +52,6 @@
 
 			bannerStatus = 3;
 		} else if (bannerStatus === 3) {
-			// document.getElementById("intro").style.visibility = "hidden";
 			document.getElementById("intro").style.opacity = "0";
 			document.getElementById("demo2").style.opacity = "1";
 
@@ -79,30 +76,21 @@
 
 <main class="main" id="banner">
 	<div class="svelte_banner ban" id="demo2">
-		<video width="613.5" height="370" autoplay muted>
+		<div class="pic">
+			<img src="images/screenshot_state.png" alt="devtol UI" />
+		</div>
+	</div>
+	<div class="demo_banner ban" id="demo1">
+		<video class="vid" autoplay muted>
 			<source src="images/demo_video.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 			<track kind="captions" />
 		</video>
 	</div>
-	<div class="demo_banner ban" id="demo1">
-		<div class="pic">
-			<img src="images/example.png" alt="graph" />
-		</div>
-	</div>
 	<div class="intro_banner ban" id="intro">
 			<h1 class="introTitle">Svelte Slicer</h1>
 			<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
-
 			<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{Button_Name}</button></a>
-		<h1>Svelte Slicer</h1>
-		<p>
-			Browser devtool extension for time traveling and visualizing Svelte
-			applications.
-		</p>
-
-		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"
-			><button>{Button_Name}</button></a>
 	</div>
 </main>
 
@@ -111,7 +99,7 @@
 		margin: auto;
 		color: white;
 		width: 100%;
-		height: 389px;
+		height: 420px;
 		overflow: hidden;
 		position: relative;
 	}
@@ -126,7 +114,7 @@
 	}
 
 	h1 {
-		font-weight: bolder;
+		font-weight: 900;
 	}
 
 	.main .ban {
@@ -143,23 +131,21 @@
 	}
 
 	.main .svelte_banner {
-		display: block;
-    
-  background-color: hsla(19, 100%, 50%, 0.884);
-  text-align: center;
-  opacity: 0;
-  padding-top: 10px;
-  padding-top: 10px;
-}
+	display: block;
+	background-color: hsla(19, 100%, 50%, 0.884);
+	text-align: center;
+	opacity: 0;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	}
 
 	.main .demo_banner {
 		display: block;
 		background-color: orange;
 		text-align: center;
 		opacity: 0;
-		padding-top: 10px;
-		padding-top: 10px;
-		
+		padding-top: 25px;
+		padding-bottom: 5px;
 	}
 
 	.main .intro_banner {
@@ -181,10 +167,15 @@
 		box-shadow: 2px 3px 4px gray;
 	}
 
-	img {
-		width: 50%;
-		height: 50%;
-		padding-top: 15px;
+	.pic img {
+		width: 700px;
+		height: 370px;
+	}
+
+	.vid {
+	width: 600px;
+	height: 370px;
+	object-fit: contain;
 	}
 
 	button:hover {
@@ -195,6 +186,6 @@
 	}
 
 	.introTitle {
-		letter-spacing: .5em;
+		letter-spacing: .1em;
 	}
 </style>

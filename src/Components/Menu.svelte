@@ -1,11 +1,12 @@
 <script>
-	
+		
 	let dark = false;
+	
   
   	export const darkToggle = () => {
 	dark = !dark;
-    
-	if(dark === true){
+	
+ 	if(dark === true){
 		const svelteBan = document.getElementsByClassName("svelte_banner ban");
 		svelteBan[0].style.backgroundColor = "grey";
 		const demoBan = document.getElementsByClassName("demo_banner ban");
@@ -41,8 +42,7 @@
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
-
-			<button class="darkBtn" on:click={() => darkToggle()}><img src="images/dark_icon.png" alt="darkmode moon"/></button>
+		<button class="darkBtn" on:click={() => darkToggle()}><img src="images/dark_icon.png" alt="darkmode moon"/></button>
 	</div>
 </nav>
 
@@ -86,16 +86,6 @@
 		padding: 1rem;
 	}
 
-	.darkBtn {
-		background-color: transparent;
-		border: none;
-		font-size: inherit;
-		font-weight: 800;
-		font-family: sans-serif;
-		color:rgb(53, 50, 50);
-		cursor: pointer;
-	}
-
 	.right_div {
 		display: flex;
 		justify-content: end;
@@ -112,8 +102,22 @@
 		cursor: pointer;
 	}
 
+	.darkBtn img {
+		width: 50%;
+		height: 50%;
+		max-width:fit-content;
+		padding: 5px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.darkBtn img {
+			display: none;
+		}
+	}
+
 	.right_div a:hover{
-		text-decoration: underline;
+		text-decoration: none;
+		color: orange;
 	}
 
 	.toolTitle {

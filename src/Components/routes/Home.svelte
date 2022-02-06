@@ -4,7 +4,7 @@
 	import Footer from '../Footer.svelte';
 	
 	const scrollToTop = () => {
-		scrollTo({top: 0});
+		scrollTo({top: 0, behavior: "smooth"});
 	};
 </script>
 	 

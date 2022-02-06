@@ -5,7 +5,7 @@
 	const dispatch = createEventDispatcher();
 
 	const onBackToTop = () => {
-		dispatch('scrollToTop', {});
+		dispatch('scrollToTop', {top: 0, behavior: 'smooth'});
 	}
 </script>
 
@@ -27,7 +27,7 @@
 		<button class="icon8" on:click={() => onBackToTop()}>
 			<img src="images/scroll-up.png" alt="scroll up arrow"/>
 		</button>
-		<a class="icon8" href=https://icons8.com><h3>icons8</h3></a>
+		<!-- <a class="icon8" href=https://icons8.com><h3>icons8</h3></a> -->
 		
 	</div>
 </footer>
@@ -35,6 +35,7 @@
 <style>
 	footer {
 		display: flex;
+		margin: auto;
 		justify-content: space-around;
 		background-color: darkgray;
 		font-size: 1.5em;;
@@ -49,12 +50,12 @@
 		color: white;
 	}
 
-	footer div {
+	/* footer div {
 		padding: 1.5rem 2rem;
-	}
+	} */
 
 	footer button {
-		margin-top: 1rem;
+		margin-top: 0;
 		min-width: 120px;
 		min-height: 40px;
 		border-radius: 2rem;
@@ -70,6 +71,7 @@
 	.icon8 {
 		text-align: center;
 		background-color: transparent;
+		font-size: 10px;
 	}
 
 	</style>
