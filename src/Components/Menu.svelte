@@ -1,8 +1,10 @@
 <script>
 	
 	let dark = false;
-export const darkToggle = () => {
+  
+  export const darkToggle = () => {
 	dark = !dark;
+    
 	if(dark === true){
 		const svelteBan = document.getElementsByClassName("svelte_banner ban");
 		svelteBan[0].style.backgroundColor = "grey";
@@ -24,7 +26,6 @@ export const darkToggle = () => {
 		const features = document.getElementsByClassName("features");
 		features[0].style.backgroundColor = "white";
 		document.getElementById("mainWrap").style.backgroundColor = "white";
-
 	}
 }
 </script>
@@ -37,15 +38,25 @@ export const darkToggle = () => {
 	</div>
 	
 	<div class="right_div">
+		<a href="/">Home </a>
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
+
 			<button class="darkBtn" on:click={() => darkToggle()}><img src="images/dark_icon.png" alt="darkmode moon"/></button>
 	</div>
 </nav>
 
 
 <style>
+
+	.right_div a:hover {
+    text-decoration: underline;
+	}
+
+	.right_div a:active{
+		color: red;
+	}
 	.left_div p {
 		text-shadow: white 0px 0px 10px;
 		font-size: 25px;
@@ -67,6 +78,10 @@ export const darkToggle = () => {
 		font-weight: bold;
 	}
 
+	#menuHeader {
+		font-size: 2em;
+	}
+
 	nav a:hover {
 		text-decoration: none;
 	}
@@ -76,6 +91,16 @@ export const darkToggle = () => {
 		padding: 1rem;
 	}
 
+	.darkBtn {
+		background-color: transparent;
+		border: none;
+		font-size: inherit;
+		font-weight: 800;
+		font-family: sans-serif;
+		color:rgb(53, 50, 50);
+		cursor: pointer;
+	}
+
 	.right_div {
 		display: flex;
 		justify-content: end;
@@ -83,6 +108,7 @@ export const darkToggle = () => {
 		background-color: lightgray;
 		text-decoration: none;
 		padding: 0 0.5rem;
+		font-size: 1.5em;
 	}
 	.darkBtn {
 		background-color: transparent;
