@@ -91,7 +91,7 @@ export const darkToggle = () => {
 		cursor: pointer;
 	}
 
-	.right_div  a:hover{
+	.right_div a:hover{
 		text-decoration: underline;
 	}
 
