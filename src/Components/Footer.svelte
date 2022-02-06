@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { link } from "svelte-routing"
+	import { link } from "svelte-routing";
 
 	const dispatch = createEventDispatcher();
 
@@ -32,6 +32,7 @@
 		display: flex;
 		justify-content: space-around;
 		background-color: darkgray;
+		font-size: 1.5em;;
 	}
 
 	footer h3 {
@@ -56,7 +57,9 @@
 		color: orange;
 		font-weight: 800;
 		border: 0px;
-		cursor: pointer
+		cursor: pointer;
+		font-size: .75em;
+		padding: 10px;
 	}
 
 	</style>

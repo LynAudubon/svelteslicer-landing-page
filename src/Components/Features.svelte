@@ -59,23 +59,22 @@
 		flex-wrap:wrap;
 		gap: 10px;
 		padding: 4rem;
+		font-size: 1.5em;
 		text-align: center;
 	}
 	
 	.feature {
-		display: block;
-		position: relative;
+		flex: 1;
+		font-size: 1em;
+		color:rgb(53, 50, 50);
 	}
 
 	.right_side {
 		text-align: center;
-		margin: 25px;
-	}
-
-	.icon {
-		flex-wrap: wrap;
-		position:static;
-		bottom: 0;
+		font-size: 1em;
+		margin: 50px;
+		position: relative;
+		color:rgb(53, 50, 50);
 	}
 
 	img {

@@ -113,6 +113,15 @@
 		position: relative;
 	}
 
+	strong.headerFontSz {
+		font-size: 2em;
+		letter-spacing: .3em;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+
 	h1 {
 		font-weight: bolder;
 	}
@@ -132,12 +141,13 @@
 
 	.main .svelte_banner {
 		display: block;
-		background-color: hsla(19, 100%, 50%, 0.884);
-		text-align: center;
-		opacity: 0;
-		padding-top: 10px;
-		padding-top: 10px;
-	}
+    
+  background-color: hsla(19, 100%, 50%, 0.884);
+  text-align: center;
+  opacity: 0;
+  padding-top: 10px;
+  padding-top: 10px;
+}
 
 	.main .demo_banner {
 		display: block;
@@ -146,6 +156,7 @@
 		opacity: 0;
 		padding-top: 10px;
 		padding-top: 10px;
+		
 	}
 
 	.main .intro_banner {
@@ -162,7 +173,7 @@
 		border-radius: 2rem;
 		background-color: lightgray;
 		color: white;
-		font-size: 1.2rem;
+		font-size: 2rem;
 		border: 0px;
 		box-shadow: 2px 3px 4px gray;
 	}
