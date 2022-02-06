@@ -32,6 +32,7 @@
 		},
 	];
 </script>
+<main id="mainWrap">
 
 <div class="features">
 	{#each articles as article (article.id)}
@@ -49,7 +50,7 @@
 	<a href="https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/" target="_blank"><img src="images/front_end_frameworks_experience_ranking.png"  alt="stat display"/></a>
 	<p>Debugging tool for the most performant JavaScript front-end framework</p>
 </div>
-
+</main>
 <style>
 	
 	.features {
