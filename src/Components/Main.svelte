@@ -113,10 +113,10 @@
 		position: relative;
 	}
 
-	strong.headerFontSz {
+	/* strong.headerFontSz {
 		font-size: 2em;
 		letter-spacing: .3em;
-	}
+	} */
 
 	p {
 		font-size: 1.5em;

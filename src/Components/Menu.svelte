@@ -1,6 +1,4 @@
 <script>
-
-
 let dark = false;
 export const darkToggle = () => {
 	dark = !dark;
@@ -27,7 +25,6 @@ export const darkToggle = () => {
 	</div>
 	
 	<div class="right_div">
-		<a href="/">Home </a>
 		<a href="/about">About Us </a>
 		<a href="https://medium.com/" target="_blank">Blog</a>
 		<a href="https://github.com/oslabs-beta/SvelteSlicer/" target="_blank">GitHub</a>
@@ -64,10 +61,6 @@ export const darkToggle = () => {
 		padding: 0 0.5rem;
 		font-size: larger;
 		font-weight: bold;
-	}
-
-	#menuHeader {
-		font-size: 2em;
 	}
 
 	nav a:hover {
