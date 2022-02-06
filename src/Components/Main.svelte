@@ -91,6 +91,10 @@
 		</div>
 	</div>
 	<div class="intro_banner ban" id="intro">
+			<h1 class="introTitle">Svelte Slicer</h1>
+			<p>Browser devtool extension for time traveling and visualizing Svelte applications.</p>
+
+			<a href="https://chrome.google.com/webstore/category/extensions?hl=en"><button>{Button_Name}</button></a>
 		<h1>Svelte Slicer</h1>
 		<p>
 			Browser devtool extension for time traveling and visualizing Svelte
@@ -98,8 +102,7 @@
 		</p>
 
 		<a href="https://chrome.google.com/webstore/category/extensions?hl=en"
-			><button>{Button_Name}</button></a
-		>
+			><button>{Button_Name}</button></a>
 	</div>
 </main>
 
@@ -190,4 +193,7 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
-</style>
+
+	.introTitle {
+		letter-spacing: .5em;
+	}
