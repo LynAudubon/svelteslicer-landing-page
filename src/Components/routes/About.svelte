@@ -1,6 +1,5 @@
 <script>
-    import { darkToggle } from '../Components/Menu.svelte'
-
+   
 </script>
 
 <div class="about_info">
