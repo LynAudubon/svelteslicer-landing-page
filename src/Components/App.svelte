@@ -4,10 +4,8 @@
     import Menu from './Menu.svelte';
     import { Router, Route, Link } from "svelte-routing";
 	
-	export let url = "";
+    export let url = "";
 
-	export const currentPath = window.location.pathname;
-	console.log(currentPath)
 
 </script>
 
