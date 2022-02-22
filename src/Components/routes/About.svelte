@@ -45,9 +45,9 @@
       >https://linkedin.com</a
     >
     <p>Lynda Labranche</p>
-    <a href="www.linkedin.com/in/lynda-labranche">https://linkedin.com</a>
+    <a href="https://www.linkedin.com/in/lynda-labranche/">https://linkedin.com</a>
     <p>Anchi Teng</p>
-    <a href="https://https://www.linkedin.com/in/anchiteng/"
+    <a href="https://www.linkedin.com/in/anchiteng/"
       >https://linkedin.com</a
     >
   </div>
