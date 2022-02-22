@@ -2,7 +2,7 @@
   export let Button_Name: string = "Download";
 
   let bannerStatus = 1;
-  let bannerTimer = 16000;
+  let bannerTimer = 15000;
 
   window.onload = function () {
     bannerLoop();
@@ -109,11 +109,6 @@
     overflow: hidden;
     position: relative;
   }
-
-  /* strong.headerFontSz {
-		font-size: 2em;
-		letter-spacing: .3em;
-	} */
 
   p {
     font-size: 1.5em;
