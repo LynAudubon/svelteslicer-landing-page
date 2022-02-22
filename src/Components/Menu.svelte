@@ -123,4 +123,13 @@
   .toolTitle {
     font-size: 25px;
   }
+
+  @media only screen and (max-width: 900px) {
+		nav a, p {
+			font-size: large;
+		}
+    .left_div p{
+      font-size: 21px;
+    }
+  }
 </style>
