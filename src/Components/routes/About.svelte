@@ -78,9 +78,4 @@
     text-align: center;
     font-size: 1em;
   }
-
-  hr {
-    background-color: darkgrey;
-    margin-top: 35px;
-  }
 </style>
