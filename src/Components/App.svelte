@@ -4,9 +4,8 @@
     import Menu from './Menu.svelte';
     import { Router, Route, Link } from "svelte-routing";
 	
-	export let url = "";
-
-	
+    export let url = "";
+  
 </script>
 
 <Router url="{url}">
