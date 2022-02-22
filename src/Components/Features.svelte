@@ -59,9 +59,9 @@
 		flex-direction: row;
 		position: relative;
 		justify-content: center;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 		gap: 10px;
-		padding: 4rem;
+		padding: 2rem 4rem;
 		font-size: 1.5em;
 		text-align: center;
 	}
@@ -70,6 +70,26 @@
 		flex: 1;
 		font-size: 1em;
 		color:rgb(53, 50, 50);
+	}
+
+	@media only screen and (max-width: 900px) {
+		.features {
+			display: block;
+		}
+		.features .icon {
+			width: 300px;
+			height: 150px;
+			padding: 0px;
+			margin: auto;
+			}
+		.feature p{
+			padding-bottom: 20px;
+			margin: 0px;
+			font-size: 20px;
+		}
+		.feature h3 {
+			font-size: 25px;
+		}
 	}
 
 	.features .icon {
@@ -94,8 +114,14 @@
 
 	img {
 		box-shadow: 0px 4px 10px #333;
-		width: 50%;
-		height: 300px;
+		width: 58%;
+		height: 360px;
+	}
+	
+	@media only screen and (max-width: 900px) {
+		img {
+			width: 70%;
+		}
 	}
 
 	hr {

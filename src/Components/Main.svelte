@@ -2,7 +2,7 @@
   export let Button_Name: string = "Download";
 
   let bannerStatus = 1;
-  let bannerTimer = 15000;
+  let bannerTimer = 16000;
 
   window.onload = function () {
     bannerLoop();
@@ -77,7 +77,7 @@
 <main class="main" id="banner">
   <div class="svelte_banner ban" id="demo2">
     <div class="pic">
-      <img src="images/screenshot_state.png" alt="devtol UI" />
+      <img src="images/screenshot_state.png" alt="devtool UI" />
     </div>
   </div>
   <div class="demo_banner ban" id="demo1">
@@ -132,28 +132,45 @@
   }
 
   .main .svelte_banner {
-    display: block;
     background-color: hsla(19, 100%, 50%, 0.884);
     text-align: center;
     opacity: 0;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 10px;
   }
 
+  @media only screen and (max-width: 600px) {
+    .svelte_banner .pic img {
+      height: 100%;
+      width: 98%;
+      padding-top: 50px;
+    }
+  }
+
   .main .demo_banner {
-    display: block;
+    width: 100%;
+    height: 100%;
     background-color: orange;
     text-align: center;
     opacity: 0;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 5px;
   }
 
   .main .intro_banner {
+    width: 100%;
+    height: 100%;
     padding: 2rem;
-    height: 1050px;
     opacity: 0;
     background-color: hsla(19, 100%, 50%, 0.884);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .intro_banner p {
+      word-break: break-all;
+      white-space: normal;
+      width: 475px;
+    }
   }
 
   button {
@@ -168,14 +185,17 @@
     box-shadow: 2px 3px 4px gray;
   }
 
-  .pic img {
-    width: 700px;
-    height: 370px;
+  .ban img {
+    width: 690px;
+    height: 380px;
+    margin: auto;
+    object-fit: fill;
   }
 
-  .vid {
-    width: 600px;
-    height: 370px;
+  .ban .vid {
+    width: 100%;
+    height: 90%;
+    align-items: center;
     object-fit: contain;
   }
 
