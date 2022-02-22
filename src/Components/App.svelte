@@ -5,8 +5,7 @@
     import { Router, Route, Link } from "svelte-routing";
 	
     export let url = "";
-
-
+  
 </script>
 
 <Router url="{url}">
